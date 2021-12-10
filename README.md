@@ -1,14 +1,12 @@
 # Bitcoin_tweets_sentiment
 
-This project uses Bitcoin Tweets data (source: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483) to do sentiment analysis on tweets text and utilizes tfidf vectorizer to convert a collection of raw documents to a matrix of TF-IDF features, then applies multiple classifiers (SGDClassifier, MultinomialNB, Randomforestclassifier) to predict the sentiment for tweets based on the training data
+This project uses Bitcoin Tweets data (source: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483) to do sentiment analysis on tweets text and utilizes tfidf vectorizer to convert a collection of raw documents to a matrix of TF-IDF features, then test multiple classifiers (SGDClassifier, MultinomialNB, Randomforestclassifier) to predict the sentiment for tweets based on the training data. All the experiments are tracked with Comet, and each logical components are isolated in Metaflow steps and important artifacts saved and versioned. 
 
 Last update: December 2021.
 
 ## Prequisites: Dependencies
-
-Different sub-projects may have different requirements, as specified in the 
-_requirements.txt_ files to be found in the various folders. We recommend using
-[virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to 
+_requirements.txt_ file contains all the required packages,
+We recommend using [virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to 
 keep environments isolated, i.e. creating a new environment:
 
 `python3 -m venv venv`
@@ -19,10 +17,13 @@ then activating it and installing the required dependencies:
 
 `pip install -r requirements.txt`
 
-## Repo Structure
+## Project Structure
+meta_flow.py: this is the main file, including Bitcoin tweets data cleaning, sentiment analysis using textblob, text convertion using tfidf vectorizer, sentiment prediction 
+using RandomForestClassifier, SGDClassifier and MultinomialNB, quantitative and qualitative test on model performance, vectorizer and model pickling for the Flask app to work
 
-The repo is organized by folder: each folder contains either resources - e.g. text corpora or slides - or Python programs, divided by type. 
-
-As far as ML is concerned, language-related topics are typically covered through notebooks, MLSys-related concepts are covered through Python scripts (not surprisingly!).
+best_model.pkl: the classifier model is pickled in this file, used for the Flask app
+best_vectorizer.pkl: the vectorizer is pickled in this file, used for the Flask app
+index.html: used to display the predicted result, needed to be placed in the templates file
 
 ### Data
+Bitcoin_tweets_sample.pkl: this data file contains 20,000 tweets, downloaded from the website: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483
