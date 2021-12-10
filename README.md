@@ -18,12 +18,12 @@ then activating it and installing the required dependencies:
 `pip install -r requirements.txt`
 
 ## Project Structure
-meta_flow.py: this is the main file, including Bitcoin tweets data cleaning, sentiment analysis using textblob, text convertion using tfidf vectorizer, sentiment prediction 
+* meta_flow.py: this is the main file, including Bitcoin tweets data cleaning, sentiment analysis using textblob, text convertion using tfidf vectorizer, sentiment prediction 
 using RandomForestClassifier, SGDClassifier and MultinomialNB, quantitative and qualitative test on model performance, vectorizer and model pickling for the Flask app to work
 
-best_model.pkl: the classifier model is pickled in this file, used for the Flask app
-best_vectorizer.pkl: the vectorizer is pickled in this file, used for the Flask app
-index.html: used to display the predicted result, needed to be placed in the templates file
+* best_model.pkl: the classifier model is pickled in this file, used for the Flask app
+* best_vectorizer.pkl: the vectorizer is pickled in this file, used for the Flask app
+* index.html: used to display the predicted result, needed to be placed in the templates file
 
 ### Data
 Bitcoin_tweets_sample.pkl: this data file contains 20,000 tweets, downloaded from the website: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483
