@@ -1,12 +1,12 @@
 # Bitcoin_tweets_sentiment
 
-This project uses Bitcoin Tweets data (source: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483) to do sentiment analysis on tweets text and utilizes tfidf vectorizer to convert a collection of raw documents to a matrix of TF-IDF features, then test multiple classifiers (SGDClassifier, MultinomialNB, Randomforestclassifier) to predict the sentiment for tweets based on the training data. All the experiments are tracked with Comet, and each logical components are isolated in Metaflow steps and important artifacts saved and versioned. 
+* This project uses Bitcoin Tweets data (source: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483) to do sentiment analysis on tweets text and utilizes tfidf vectorizer to convert a collection of raw documents to a matrix of TF-IDF features, then test multiple classifiers (SGDClassifier, MultinomialNB, Randomforestclassifier) to predict the sentiment for tweets based on the training data. All the experiments are tracked with Comet, and each logical components are isolated in Metaflow steps and important artifacts saved and versioned. 
 
 Last update: December 2021.
 
 ## Prequisites: Dependencies
 _requirements.txt_ file contains all the required packages,
-We recommend using [virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to 
+recommend using [virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to 
 keep environments isolated, i.e. creating a new environment:
 
 `python3 -m venv venv`
@@ -27,3 +27,8 @@ using RandomForestClassifier, SGDClassifier and MultinomialNB, quantitative and 
 
 ### Data
 Bitcoin_tweets_sample.pkl: this data file contains 20,000 tweets, downloaded from the website: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483
+
+
+## Acknowledgments
+
+* Thanks professors Meninder Purewal and Jacopo Tagliabue for their teach in ML and NLP and the great help and guidances in this project!
