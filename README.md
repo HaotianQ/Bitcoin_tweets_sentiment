@@ -1,6 +1,6 @@
 # Bitcoin_tweets_sentiment
 
-* This project uses Bitcoin Tweets data (source: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483) to do sentiment analysis on tweets text and utilizes tfidf vectorizer to convert a collection of raw documents to a matrix of TF-IDF features, then test multiple classifiers (SGDClassifier, MultinomialNB, Randomforestclassifier) to predict the sentiment for tweets based on the training data. All the experiments are tracked with Comet, and each logical components are isolated in Metaflow steps and important artifacts saved and versioned. 
+This project uses Bitcoin Tweets data (source: https://www.kaggle.com/kaushiksuresh147/bitcoin-tweets/tasks?taskId=3483) to do sentiment analysis on tweets text and utilizes tfidf vectorizer to convert a collection of raw documents to a matrix of TF-IDF features, then test multiple classifiers (SGDClassifier, MultinomialNB, Randomforestclassifier) to predict the sentiment for tweets based on the training data. All the experiments are tracked with Comet, and each logical components are isolated in Metaflow steps and important artifacts saved and versioned. 
 
 Last update: December 2021.
 
